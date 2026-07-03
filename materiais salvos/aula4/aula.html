@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Algoritmos</title>
+	<style>
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 8px;
+			text-align: center;
+		}
+		.coluna-destaque {
+			background-color: #f2f2f2;
+		}
+		h5 {
+  			font-size: 1em;
+		}
+		h4 {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>lições de casa</h1>
+		<h2>análise de tempo dos algoritmos insertion sort, bubble sort e selectionsort.</h2>
+		<h3>mas primeiro irei reconceituar os algoritmos de ordenação:</h3>
+
+		<p>esses 3 algoritmos são métodos clássicos de ordenação de elementos em uma lista. Eles são relativamente simples de entender e implementar, mas podem ser ineficientes em grandes conjuntos de dados.</p>
+		<ul>
+			<h4>insertion sort</h4>
+			<li>
+				<p>
+					O algoritmo de Insertion Sort é um algoritmo de ordenação que percorre uma lista de elementos e insere cada elemento em sua posição correta na parte já ordenada da lista. Esse processo é repetido até que todos os elementos da lista estejam na posição correta, resultando em uma lista ordenada. <br> <br>
+
+					O algoritmo de Insertion Sort é implementado com um laço externo que percorre a lista a ser ordenada, começando do segundo elemento e indo até o último. Para cada elemento, o algoritmo realiza um laço interno que percorre a parte já ordenada da lista, do final para o início, e insere o elemento na posição correta. <br> <br>
+
+					O processo de inserção é realizado comparando o elemento atual com o elemento anterior na lista já ordenada. Se o elemento atual for menor que o elemento anterior, os dois elementos são trocados. Esse processo de comparação e troca é repetido até que o elemento atual encontre a sua posição correta na lista já ordenada. <br> <br>
+
+					O Insertion Sort é um pouco mais eficiente que o Bubble Sort, mas ainda pode ser ineficiente para listas muito grandes. Sua complexidade de tempo é O(n^2), o que significa que o tempo de execução cresce exponencialmente com o tamanho da lista.
+				</p>
+				<h5>exemplo em pseudo-código:</h5>
+				<code>
+					insertionSort(lista): <br>
+					n = tamanho(lista) <br>
+					para i de 1 até n-1: <br>
+					  chave = lista[i] <br>
+					  j = i-1 <br>
+					  enquanto j >= 0 e lista[j] > chave: <br>
+						lista[j+1] = lista[j] <br>
+						j = j-1 <br>
+					  lista[j+1] = chave <br>
+					retornar lista <br>
+				</code>
+				<br>
+			</li>
+			<h4>bubble sort</h4>
+			<li>
+				<p>
+					O algoritmo de Bubble Sort é um algoritmo de ordenação que percorre a lista várias vezes, comparando cada elemento com o seu vizinho e trocando de posição caso esteja fora de ordem. Esse processo é repetido até que nenhum elemento precise mais ser trocado de posição, resultando em uma lista ordenada.  <br> <br>
+
+					O algoritmo de Bubble Sort é implementado com um laço externo que percorre a lista a ser ordenada, comparando cada elemento com o seu vizinho imediato e trocando de posição se necessário. Esse processo é repetido até que todos os elementos da lista estejam na posição correta.  <br> <br>
+
+					Durante cada iteração do laço externo, o algoritmo percorre a lista com um laço interno, comparando o elemento atual com o seu vizinho imediato e trocando de posição se o elemento atual for maior que o seu vizinho. Esse processo é repetido até que o final da lista seja alcançado.  <br> <br>
+
+					O processo de troca de posições é realizado comparando o elemento atual com o seu vizinho imediato. Se o elemento atual for maior que o seu vizinho, os dois elementos são trocados de posição. Esse processo de comparação e troca é repetido até que a lista esteja completamente ordenada. <br> <br>
+
+					Embora seja fácil de entender e implementar, o Bubble Sort é um algoritmo ineficiente, especialmente para listas grandes. Sua complexidade de tempo é O(n^2), o que significa que o tempo de execução cresce exponencialmente com o tamanho da lista.
+				</p>
+				<h5>exemplo em pseudo-código:</h5>
+				<code>
+					bubbleSort(lista): <br>
+					n = tamanho(lista) <br>
+					para i de 0 até n-1: <br>
+					  para j de 0 até n-i-1: <br>
+						se lista[j] > lista[j+1]: <br>
+						  trocar(lista[j], lista[j+1]) <br> 
+					retornar lista <br>
+					<br>
+					função trocar(a, b) <br>
+					temp = a <br>
+					a = b <br>
+					b = temp <br> 
+					fim função <br>
+				</code>
+
+			</li>
+			<br>
+			
+			<h4>selection sort</h4>
+			<li>
+				<p>
+					O algoritmo de Selection Sort é um algoritmo de ordenação que seleciona o menor elemento da lista e o coloca na primeira posição, o segundo menor elemento é colocado na segunda posição, e assim sucessivamente. Esse processo é repetido até que todos os elementos da lista estejam na posição correta, resultando em uma lista ordenada.<br> <br>
+
+					O algoritmo de Selection Sort é implementado com um laço externo que percorre a lista a ser ordenada, selecionando o menor elemento e colocando-o na primeira posição da lista. Em seguida, o laço externo avança para a próxima posição e repete o processo, selecionando o menor elemento na parte restante da lista e colocando-o na posição correta.<br> <br>
+
+					O processo de seleção é realizado comparando cada elemento da lista com o menor elemento encontrado até o momento. Se um elemento for encontrado que seja menor que o menor elemento atual, ele se torna o novo menor elemento. Esse processo de comparação é repetido até que o menor elemento da lista seja encontrado. Depois de encontrar o menor elemento, ele é colocado na posição correta na lista, e o processo de seleção continua para o restante da lista. <br> <br>
+
+					O Selection Sort é mais eficiente que o Bubble Sort e o Insertion Sort, mas ainda pode ser ineficiente para listas muito grandes. Sua complexidade de tempo também é O(n^2).
+				</p>
+				<h5>exemplo em pseudo-código:</h5>
+				<code>
+					selectionSort(lista): <br>
+					n = tamanho(lista) <br>
+					para i de 0 até n-1: <br>
+						indice_minimo = i <br>
+						para j de i+1 até n-1: <br>
+						se lista[j] < lista[indice_minimo]: <br>
+							indice_minimo = j <br>
+						se indice_minimo != i: <br>
+						trocar(lista[i], lista[indice_minimo]) <br>
+					retornar lista <br>
+					<br>
+					função trocar(a, b) <br>
+					temp = a <br>
+					a = b <br>
+					b = temp <br> 
+					fim função <br>
+				</code>
+			</li>
+		</ul>
+		<div>
+			<h2>comparativos de velocidade entre os 3 algoritmos supracitados:</h2>
+			<table colgroup>
+				<col>
+				<col span="1" style="border-right: 1px solid black;">
+				<col>
+				<col span="1" style="border-right: 1px solid black;">
+				<col>
+				<tr>
+					<th>Algoritmo</th>
+					<th>Melhor caso</th>
+					<th>Pior caso</th>
+					<th>Caso médio</th>
+					<th>Estabilidade</th>
+				</tr>
+				<tr>
+					<td>Bubble Sort</td>
+					<td>O(n)</td>
+					<td>O(n^2)</td>
+					<td>O(n^2)</td>
+					<td>Estável</td>
+				</tr>
+				<tr>
+					<td>Insertion Sort</td>
+					<td>O(n)</td>
+					<td>O(n^2)</td>
+					<td>O(n^2)</td>
+					<td>Estável</td>
+				</tr>
+				<tr>
+					<td>Selection Sort</td>
+					<td>O(n^2)</td>
+					<td>O(n^2)</td>
+					<td>O(n^2)</td>
+					<td>Não Estável</td>
+				</tr>
+			</table>
+			<p>
+				O melhor caso para o Bubble Sort e o Insertion Sort ocorre quando a lista a ser ordenada já está ordenada ou quase ordenada, resultando em um tempo de execução de O(n), onde n é o número de elementos na lista. O pior caso para ambos os algoritmos ocorre quando a lista está completamente desordenada, resultando em um tempo de execução de O(n^2). <br> <br>
+
+				O melhor caso para o Selection Sort ocorre quando a lista está completamente desordenada, resultando em um tempo de execução de O(n^2), que é o mesmo que o pior caso para o algoritmo. O pior caso também ocorre quando a lista está completamente desordenada, resultando em um tempo de execução de O(n^2).
+			</p>
+		</div>
+	</div>
+	
+	<br>
+
+	<div>
+		<h1>Anotações da aula 20/03/23:</h1>
+		<div>
+			<h2>Notação Assintótica</h2>
+			<p>
+				é a forma como nós trabalhamos a análise de algoritmos de um ponto de vista imparcial, onde avaliamos algoritmos com base em seu desempenho de tempo(não atrelado a segundos)
+			</p>
+			<div>
+				<h3>como se analisa um algoritmo</h3>
+				<ul>
+					<li>
+						tempo de cpu
+					</li>
+					<li>
+						modelo matemático -- F(N)
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h3>quando um algoritmo é assintoticamente firme?</h3>
+				<p>
+					é quando um algoritmo mantém uma taxa de desempenho estável mesmo quando o tamanho de um problema aumenta significativamente. <br>
+					por exemplo um algoritmo assintoticamente firme tem seu tempo de execução em uma taxa de crescimento muito mais lenta do que o tamanho do problema(entrada). <br>
+					Por exemplo, um algoritmo de ordenação que tem um tempo de execução de O(nlogn) é considerado assintoticamente firme, pois o tempo de execução cresce apenas ligeiramente mais rápido do que o tamanho da entrada (n), mesmo para tamanhos de entrada muito grandes.
+				</p>
+			</div>
+			<div>
+				<h3>tipos de notação</h3>
+				<ul>
+					<li>
+						<h4>BIG O</h4>
+						<p>é usado para delimitar o limite superior em relação ao tempo. ex: no pior caso meu algoritmo tem O(n²)</p>
+						REGRA DA SOMA    O(f(n))  +  O(g(n)) <br>
+						▪ Suponha 3 trechos de programas cujos tempos de execução sejam
+						O(n), O(n2) e O(nlogn). <br>
+						▪ O tempo de execução dos 2 primeiros trechos é O(max(n,n2), que é
+						O(n2). <br>
+						▪ O tempo de execução de todos os 3 trechos é, então, O(max(n2,
+						nlogn)), que é O(n2) <br>
+					</li>
+					<li>
+						<h4>Notação little O</h4>
+						<p>
+							O limite assintótico superior definido pela notação O pode ser <br>
+							assintoticamente firme ou não. <br>
+							EXEMPLO: <br>
+							O limite 2n² = O(𝑛²) é assintoticamente firme <br>
+							O limite 2n = O(𝑛²) não é assintoticamente firme. <br>
+							A notação o é usada para definir um limite superior que não é
+							assintoticamente firme. <br>
+						</p>
+					</li>
+					<li>
+						<h4>Notação theta</h4>
+						<p>
+							- f(n) = Θ(g(n)) <br>
+							• Lê-se f(n) é da mesma ordem de g(n). <br>
+							• Θlimita a função por fatores constantes. <br>
+							- g(n) é um limite assintótico superior e inferior para f(n)
+							ou 
+							- g(n) é um limite assintótico firme para f(n). <br>
+						</p>
+					</li>
+					<li>
+						<h4>Notação ômega</h4>
+						<p>
+							f(n) = Ω(g(n)) <br>
+							Lê-se  f(n) é de ordem no mínimo  g(n) <br>
+							Ω define um limite inferior para a função,  por um  fator 
+							constante. <br>
+							f (n) é um  limite assintótico  inferior para g(n) <br>
+							</p>
+					</li>
+					<li>
+						<h4>Notação little ômega</h4>
+						<p>
+							'O limite assintótico inferior definido pela notação ω pode ser
+							assintoticamente firme ou não. <br>
+							EXEMPLO: <br>
+							O limite 2n2 = ω(n2) é assintoticamente firme <br>
+							O limite 2n2 = ω(n) não é assintoticamente firme. <br>
+							A notação ω é usada para definir um limite inferior que não é
+							assintoticamente firme.' <br>
+
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<h2>instancia de problema</h2>
+			A= {1,5,2,3} = #16 -- o limite do problema tende ao infinito
+			int = Z
+			Aº = {1,2,3,5}
+		</div>
+		<div>
+			<h2>para que serve uma estrutura de dados</h2>
+			<p>serve para organizar dados, manipular etc -- formente ligado ás politicas de uso de dados</p> 
+			<p>
+				são divididas em 3:
+				<ul>
+					<li>encadeadas:</li>
+					<li>arvores:</li>
+					<li>grafos:</li>
+				</ul>
+			</p>
+		</div>
+		<div>
+			<h2>ordem de crescimento</h2>
+			<p>N entradas para T tempos de execução</p>
+			<p>para se executar certas entradas, leva-se certo tempo para executar</p>
+
+			<h3>FUNÇÃO DE CRESCIMENTO DE TEMPO EM RELAÇÃO A ENTRADA DE UM ALGORITMO</h3>
+			<P>CADA ALGORITMO TEM UMA ESTRATÉGIA PROPRIA PARA RESOLVER UM PROBLEMA</P>
+			<br>
+		</div>
+	</div>
+
+	<div>
+		<p>REVISAO DE MATEMATICA!!!</p>
+		<ul>
+			<p>propriedades</p>
+			<li>limites</li>
+			<li>!!!!logaritmos!!!!</li>
+			<li>exponenciais</li>
+			<li>pa</li>
+			<li>pg</li>
+			<li>!!!!somatorio!!!!</li>
+			<li>pseudo-código</li>
+		</ul>
+	</div>
+</body>
+</html>
