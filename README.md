@@ -1,25 +1,41 @@
-# Torre de Hanoi - Repositório
+# Análise de Algoritmos — DCC606
 
-Este é o repositório **KelvinFerreira_TorreDeHanoi_AA_RR_2023** criado por Kelvin Araújo Ferreira para a disciplina de Análise de Algoritmos, ministrada pelo professor [Herbert Oliveira Rocha](https://github.com/hbgit).
+Repositório com seminários, projeto final e material de aula da disciplina **DCC606 — Análise de Algoritmos**, cursada na **Universidade Federal de Roraima (UFRR)**.
 
-## Tema da Apresentação: Torre de Hanoi
+| | |
+|---|---|
+| 📚 Disciplina | DCC606 — Análise de Algoritmos |
+| 👨‍🏫 Professor | [Herbert Oliveira Rocha](https://github.com/hbgit) |
+| 🏛️ Universidade | Universidade Federal de Roraima (UFRR) |
+| 📅 Semestre | 2023.1 / 2023.2 |
 
-Neste repositório, você encontrará os seguintes arquivos e pastas:
+## Trabalhos
 
-- **[Códigos em C - Torre de Hanoi](https://github.com/DilliKel/KelvinFerreira_TorreDeHanoi_AA_RR_2023/tree/ad23ca7b38bf6b15aec397bb1fc983b95713b917/C%C3%B3digos%20em%20C%20-%20Torre%20de%20Hanoi)**: Esta pasta contém os códigos em linguagem C relacionados ao problema da Torre de Hanoi. Esses códigos são implementações do algoritmo para resolver o problema.
-- **[Dados das saídas](https://github.com/DilliKel/KelvinFerreira_TorreDeHanoi_AA_RR_2023/tree/ad23ca7b38bf6b15aec397bb1fc983b95713b917/Dados%20das%20sa%C3%ADdas)**: Esta pasta contém os dados de saída gerados a partir da execução dos códigos em C. Os arquivos aqui fornecidos podem ser úteis para analisar e comparar os resultados obtidos.
-- **Torre de Hanoi - Kelvin Araújo.pdf**: Este arquivo PDF é a apresentação relacionada ao tema da Torre de Hanoi, desenvolvida por Kelvin Araújo Ferreira. Você pode encontrar informações detalhadas sobre o problema, suas soluções e análises neste documento.
+| Trabalho | Tema | Tipo | Equipe | Pasta |
+|----------|------|------|--------|-------|
+| Seminário | Torre de Hanói — complexidade O(2ⁿ) | Individual | Kelvin Araújo | [torre-de-hanoi](./torre-de-hanoi) |
+| Projeto Final | Problema do Clique — algoritmo Bron-Kerbosch + scraping Twitter | Equipe | Guilherme, Lucas, Kelvin | [problema-do-clique](./problema-do-clique) |
 
-## Outras informações
+## Material de Aulas
 
-- **Professor**: [Herbert Oliveira Rocha](https://github.com/hbgit);
-- **Notion**: [Notion - Torre de Hanoi - Kelvin Ferreira](https://dillikel.notion.site/dillikel/Semin-rio-Torre-de-Han-i-An-lise-de-Algoritmos-04bda69bc2e34fb590cb28f6946274fb).
+Slides, exercícios e atividades de revisão disponíveis em [material-aulas](./material-aulas).
 
-## Links úteis
+## Conceitos praticados
 
-- [Códigos em C - Torre de Hanoi](https://github.com/DilliKel/KelvinFerreira_TorreDeHanoi_AA_RR_2023/tree/ad23ca7b38bf6b15aec397bb1fc983b95713b917/C%C3%B3digos%20em%20C%20-%20Torre%20de%20Hanoi);
-- [Dados das saídas](https://github.com/DilliKel/KelvinFerreira_TorreDeHanoi_AA_RR_2023/tree/ad23ca7b38bf6b15aec397bb1fc983b95713b917/Dados%20das%20sa%C3%ADdas);
-- [Torre de Hanoi - Kelvin Araújo.pdf](./Torre%20de%20Hanoi%20-%20Kelvin%20Araújo.pdf);
-- [Notion - Torre de Hanoi](https://dillikel.notion.site/dillikel/Semin-rio-Torre-de-Han-i-An-lise-de-Algoritmos-04bda69bc2e34fb590cb28f6946274fb).
+- Análise assintótica — notação Big-O, Ω e Θ
+- Recursividade e custo computacional
+- Problemas NP — classe de complexidade
+- Algoritmo Bron-Kerbosch para cliques máximos
+- Scraping e análise de grafos reais (Twitter)
+- Algoritmos gulosos e força bruta
 
-Sinta-se à vontade para explorar e utilizar os recursos disponíveis neste repositório. Se tiver alguma dúvida ou sugestão, não hesite em entrar em contato comigo (kelvin.ufrr@gmail.com) ou com o professor Herbert Oliveira Rocha. Aproveite o seu aprendizado sobre o problema da Torre de Hanoi!
+## Material Complementar
+
+- 📖 [Algoritmos: Teoria e Prática — Thomas Cormen](https://www.amazon.com.br/Algoritmos-Teoria-Pr%C3%A1tica-Thomas-Cormen/dp/8535236996) — livro base da disciplina
+- 📓 [Notion — Torre de Hanói](https://dillikel.notion.site/dillikel/Semin-rio-Torre-de-Han-i-An-lise-de-Algoritmos-04bda69bc2e34fb590cb28f6946274fb)
+- 📓 [Notion — Problema do Clique](https://dillikel.notion.site/Projeto-Final-An-lise-de-Algoritmos-24690bbb097740e7878d7ff4b33a6fa2?pvs=4)
+
+## Autor
+
+**Kelvin Araújo Ferreira**
+[linkedin.com/in/dillikel](https://linkedin.com/in/dillikel)
